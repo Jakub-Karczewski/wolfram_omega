@@ -10,7 +10,7 @@ public:
     long long wyk;
     long long prec;
     void delet();
-    Float(const long long &SS = 51, const string &XX = "0", const long long &xx = 0, const bool &rak = 1);
+    Float(const long long & = 51, const std::string & = "0", const long long & = 0, const bool & = 1);
     Float operator*(const Float &);
     Float operator+(const Float &);
     Float operator-(Float);
@@ -27,8 +27,6 @@ public:
     Float operator % ( Float &);
 };
 
-ostream &operator<<(ostream &os, const Float &obj);
-
-Float jed(100, "1", 0), dwa(100, "1", 0);
+std::ostream &operator<<(std::ostream &os, const Float &obj);
 
 #endif

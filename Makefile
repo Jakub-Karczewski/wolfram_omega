@@ -1,5 +1,8 @@
 gpp = g++
-gflags = -O3
+gflags = -O3 -std=c++17
+
+kalkulator.exe: bignum.o integer.o float.o funkcje.o complex.o funkcje.o main.o onp.o
+	$(gpp) $(gflags) main.o onp.o complex.o funkcje.o float.o integer.o bignum.o -o kalkulator.exe
 
 bignum.o: bignum.hpp bignum.cpp
 	$(gpp) $(gflags) bignum.cpp -c -o bignum.o
@@ -21,6 +24,3 @@ onp.o: funkcje.hpp funkcje.cpp bignum.hpp bignum.cpp integer.hpp integer.cpp flo
 
 main.o: funkcje.hpp funkcje.cpp bignum.hpp bignum.cpp integer.hpp integer.cpp float.cpp float.hpp onp.cpp onp.hpp main.cpp complex.cpp complex.hpp
 	$(gpp) $(gflags) main.cpp -c -o main.o
-
-kalkulator.exe: bignum.o integer.o float.o funkcje.o complex.o funkcje.o main.o
-	$(gpp) $(gflags) main.o onp.o complex.o funkcje.o float.o integer.o bignum.o -o kalkulator.exe

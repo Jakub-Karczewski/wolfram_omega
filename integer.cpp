@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Integer::Integer(string a = "1", bool sign = 1)
+Integer::Integer(string a, bool sign)
 {
     number = a;
     zn = sign;

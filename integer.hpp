@@ -6,13 +6,13 @@
 class Integer
 {
 public:
-    string number;
+    std::string number;
     bool zn;
-    Integer(std::string a = "1", bool sign = 1);
+    Integer(std::string = "1", bool = 1);
     Integer operator+(const Integer &);
     Integer operator-(Integer);
     Integer operator*(const Integer &);
-    Integer operator*(const string &);
+    Integer operator*(const std::string &);
     Integer operator/(const Integer &);
     Integer operator%(const Integer &);
     Integer operator^(const Integer &);
@@ -24,6 +24,6 @@ public:
     bool operator<(Integer &);
 };
 
-ostream &operator<<(ostream &, const Integer &);
+std::ostream &operator<<(std::ostream &, const Integer &);
 
 #endif

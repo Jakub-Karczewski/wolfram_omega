@@ -17,7 +17,7 @@ void Float::delet()
     }
 }
 
-Float::Float(const long long &SS = 51, const string &XX = "0", const long long &xx = 0, const bool &rak = 1)
+Float::Float(const long long &SS, const string &XX, const long long &xx, const bool &rak)
 {
     mantyssa.number = XX;
     wyk = xx;

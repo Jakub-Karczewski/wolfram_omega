@@ -9,7 +9,8 @@ int main()
     string zapytanie;
     int precyzja;
     cin >> precyzja;
+    cin.ignore(1);
     getline(cin, zapytanie);
-    cout << obl(onp(zapytanie), precyzja) << '\n';
+    cout << OBL(ONP(zapytanie), precyzja) << '\n';
     return 0;
 }

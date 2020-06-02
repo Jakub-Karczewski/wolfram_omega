@@ -11,7 +11,6 @@
 #ifndef BIGNUM_HPP
 #define BIGNUM_HPP
 
-bool con = 0;
 bool compare(const std::string &, const std::string &);
 
 std::string zero(const int &);

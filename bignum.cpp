@@ -1,7 +1,7 @@
 #include "bignum.hpp"
 
 using namespace std;
-
+bool con = 0;
 bool compare(const string &a, const string &b)
 {
     if (b.size() > a.size())

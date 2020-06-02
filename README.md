@@ -1,5 +1,6 @@
 # wolfram_omega
 Doskonały kalkulator, do pełni szczęścia brakuje mu tylko grafiki.
+
 Zasada działania aplikacji konsolowej polega na tym, że użytkownik podaje precyzję,
 z jaką chcę chcę wykonywać obliczenia, a następnie podaje działanie, z uwzględnieniem nawiasów.
 Obsługiwane operatory i funkcje:

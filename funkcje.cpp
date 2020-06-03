@@ -68,9 +68,8 @@ Float arcsin(Float value)
 
 Float arcsin_2(Float value)
 {
-    Float dwa(value.prec, "2"), jeden(value.prec, "1");
-    //cout << value/(jeden + sqr(jeden - (value * value))) << '\n';
-    return dwa * arctg(value/(jeden + sqr(jeden - (value * value))));
+    Float dwa(value.prec, "2"), one(value.prec, "1");
+    return dwa * arctg(value/(one + sqr(one - (value * value))));
 }
 
 Float arccos(Float value)

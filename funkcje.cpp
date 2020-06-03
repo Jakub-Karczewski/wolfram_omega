@@ -61,7 +61,6 @@ Float arcsin(Float value)
         wartosc_2 = wartosc_2 * (last_2 - ink) * (last_2);
         pref = (wartosc_2 * pop) / (pot_2 * pot_2 * wartosc * wartosc * suma);
         wyn = wyn + pref;
-        cout << wartosc_2 << '\n' << (pot_2 * pot_2 * wartosc * wartosc) << '\n' << pop << '\n' << suma << '\n' << '\n';
     }
     while(pref > Epsi);
     return wyn;

@@ -229,7 +229,7 @@ pair<string, string> dziel(string a, const string &b)
     int ile;
     string iloraz, pom;
     if (b == "0")
-        return make_pair("Zero division error ", "Kill yourself");
+        return make_pair("Zero division error ", "Nie dziel przez 0");
     if (a == b)
         return make_pair("1", "0");
     if (compare(a, b))

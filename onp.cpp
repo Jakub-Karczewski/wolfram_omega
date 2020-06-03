@@ -37,7 +37,7 @@ string ONP(string inp)
 {
     stack <char> stos;
     vector <string> tokeny;
-    string licz, op, dupsko, wyk;
+    string licz, op, ciag, wyk;
     bool kropka = 0;
     int wykl = 0, i = 0;
     while(i < inp.size())
@@ -155,8 +155,6 @@ string ONP(string inp)
     }
     if(licz != "")
         tokeny.push_back(licz + ";" + to_string(wykl));
-    //for(const string &ss : tokeny)
-    //cout << ss << ' ';
     for(int i = 0; i < tokeny.size(); i++)
     {
         int p = pior(tokeny[i][0]);
@@ -166,8 +164,8 @@ string ONP(string inp)
             {
                 if(stos.top() != '(')
                 {
-                    dupsko += stos.top();
-                    dupsko += ' ';
+                    ciag += stos.top();
+                    ciag += ' ';
                     stos.pop();
                 }
                 else
@@ -186,8 +184,8 @@ string ONP(string inp)
             {
                 if(pior(stos.top()) >= p)
                 {
-                    dupsko += stos.top();
-                    dupsko += ' ';
+                    ciag += stos.top();
+                    ciag += ' ';
                     stos.pop();
                 }
                 else
@@ -196,15 +194,15 @@ string ONP(string inp)
             stos.push(tokeny[i][0]);
         }
         else
-            dupsko += tokeny[i]+" ";
+            ciag += tokeny[i]+" ";
     }
     while(stos.size() > 0)
     {
-        dupsko += stos.top();
-        dupsko += ' ';
+        ciag += stos.top();
+        ciag += ' ';
         stos.pop();
     }
-    return dupsko;
+    return ciag;
 }
 
 Float OBL(string inp, int prec)
